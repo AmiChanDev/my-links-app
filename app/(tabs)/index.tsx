@@ -35,7 +35,7 @@ export default function App() {
   const shareLink = async (url: string, title: string) => {
     try {
       await Share.share({
-        message: `My ${title} link: ${url}`,
+        message: `${title.charAt(0).toUpperCase() + title.slice(1)} link: ${url}`,
       });
     } catch (error) {
       console.log("Error sharing link:", error);

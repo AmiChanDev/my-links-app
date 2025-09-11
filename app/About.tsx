@@ -6,13 +6,13 @@ export default function ModalScreen() {
   return (
     <ScrollView contentContainerStyle={styles.container}>
       {/* App Icon */}
-      <Image
-        source={{ uri: "https://via.placeholder.com/120" }} // Replace with your app icon URL
+      {/* <Image
+        source={{ uri: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" }} 
         style={styles.appIcon}
-      />
+      /> */}
 
       {/* App Name */}
-      <MonoText style={styles.appName}>My Links App</MonoText>
+      <MonoText style={styles.appName}>Ami Links App</MonoText>
 
       {/* App Description */}
       <MonoText style={styles.description}>
