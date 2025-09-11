@@ -32,7 +32,7 @@ export default function TabLayout() {
           title: 'Link Tree',
           tabBarIcon: ({ color }) => <TabBarIcon name="link" color={color} />,
           headerRight: () => (
-            <Link href="/modal" asChild>
+            <Link href="/About" asChild>
               <Pressable>
                 {({ pressed }) => (
                   <FontAwesome

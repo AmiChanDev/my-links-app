@@ -7,7 +7,7 @@ export default function TabTwoScreen() {
     <View style={styles.container}>
       {/* Profile Photo */}
       <Image
-        source={{ uri: "" }} // 🔹 replace with your own photo URL
+        source={require("../../assets/images/me.png")} // 🔹 replace with your own photo URL
         style={styles.profileImage}
       />
 
