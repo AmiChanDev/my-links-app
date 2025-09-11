@@ -5,6 +5,7 @@ import { Stack } from 'expo-router';
 import * as SplashScreen from 'expo-splash-screen';
 import { useEffect } from 'react';
 import 'react-native-reanimated';
+import { MonoText } from '@/components/StyledText';
 
 import { useColorScheme } from '@/components/useColorScheme';
 
@@ -52,7 +53,13 @@ function RootLayoutNav() {
     <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
       <Stack>
         <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-        <Stack.Screen name="About" options={{ presentation: 'modal' }} />
+        <Stack.Screen
+          name="About"
+          options={{
+            presentation: 'modal',
+            headerTitle: () => <MonoText>About</MonoText>, // use monospace header
+          }}
+        />
       </Stack>
     </ThemeProvider>
   );

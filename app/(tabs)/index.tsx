@@ -7,8 +7,11 @@ import {
   ScrollView,
   TouchableOpacity,
   Share,
+  Alert,
 } from "react-native";
 import { FontAwesome } from "@expo/vector-icons";
+import * as Updates from "expo-updates";
+import { useEffect } from "react";
 
 type LinkItem = {
   title: string;
@@ -28,6 +31,29 @@ const links: LinkItem[] = [
 ];
 
 export default function App() {
+  // Check for updates when the screen mounts
+  useEffect(() => {
+    const checkForUpdates = async () => {
+      try {
+        const update = await Updates.checkForUpdateAsync();
+        if (update.isAvailable) {
+          await Updates.fetchUpdateAsync();
+          Alert.alert("Update available", "The app will reload to apply the latest changes.", [
+            {
+              text: "OK",
+              onPress: async () => {
+                await Updates.reloadAsync();
+              },
+            },
+          ]);
+        }
+      } catch (e) {
+        console.error("Error checking updates:", e);
+      }
+    };
+
+    checkForUpdates();
+  }, []);
   const openLink = (url: string) => {
     Linking.openURL(url);
   };
