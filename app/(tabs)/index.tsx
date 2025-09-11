@@ -6,6 +6,7 @@ import {
   Linking,
   ScrollView,
   TouchableOpacity,
+  Share,
 } from "react-native";
 import { FontAwesome } from "@expo/vector-icons";
 
@@ -16,14 +17,29 @@ type LinkItem = {
 };
 
 const links: LinkItem[] = [
-  { title: "GitHub", url: "https://github.com/YourProfile", icon: "github" },
-  { title: "LinkedIn", url: "https://linkedin.com/in/YourProfile", icon: "linkedin" },
-  { title: "Portfolio", url: "https://yourwebsite.com", icon: "globe" },
+  { title: "Facebook", url: "https://web.facebook.com/ami.gamage.69/", icon: "facebook" },
+  { title: "Instagram", url: "https://www.instagram.com/amichan6.9", icon: "instagram" },
+  { title: "Whatsapp", url: "https://api.whatsapp.com/send?phone=94717982214&text=Hi%20from%20the%20app", icon: "whatsapp" },
+  { title: "TikTok", url: "https://tiktok.com/@ami_chan69", icon: "music" },
+  { title: "LinkedIn", url: "https://www.linkedin.com/in/gamageami", icon: "linkedin" },
+  { title: "Github", url: "https://github.com/AmiChanDev", icon: "github" },
+  { title: "Portfolio", url: "https://amichandev.github.io/portfolio/", icon: "globe" },
+  { title: "Email", url: "mailto:gamageamantha@gmail.com", icon: "mail-forward" },
 ];
 
 export default function App() {
   const openLink = (url: string) => {
     Linking.openURL(url);
+  };
+
+  const shareLink = async (url: string, title: string) => {
+    try {
+      await Share.share({
+        message: `My ${title} link: ${url}`,
+      });
+    } catch (error) {
+      console.log("Error sharing link:", error);
+    }
   };
 
   return (
@@ -32,8 +48,9 @@ export default function App() {
         <TouchableOpacity
           key={index}
           style={styles.card}
-          onPress={() => openLink(link.url)}
           activeOpacity={0.8}
+          onPress={() => openLink(link.url)}
+          onLongPress={() => shareLink(link.url, link.title)}
         >
           <View style={styles.cardContent}>
             <FontAwesome name={link.icon} size={22} color="#fff" style={styles.icon} />

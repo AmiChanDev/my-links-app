@@ -1,15 +1,15 @@
 {
   "expo": {
-    "name": "my-links-app",
+    "name": "Ami-Links",
     "slug": "my-links-app",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "orientation": "portrait",
-    "icon": "./assets/images/icon.png",
+    "icon": "./assets/images/logo.png",
     "scheme": "mylinksapp",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "splash": {
-      "image": "./assets/images/splash-icon.png",
+      "image": "./assets/images/logo.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -19,7 +19,7 @@
     "android": {
       "package": "com.yourname.mylinksapp",
       "adaptiveIcon": {
-        "foregroundImage": "./assets/images/adaptive-icon.png",
+        "foregroundImage": "./assets/images/logo.png",
         "backgroundColor": "#ffffff"
       },
       "edgeToEdgeEnabled": true,
@@ -41,6 +41,7 @@
       "eas": {
         "projectId": "221880ae-a64a-4715-ab11-29bd2f44bead"
       }
-    }
+    },
+    "owner": "amichan"
   }
 }
