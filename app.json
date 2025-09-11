@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "Ami-Links",
-    "slug": "my-links-app",
+    "slug": "Ami-Links",
     "version": "1.0.1",
     "orientation": "portrait",
     "icon": "./assets/images/logo.png",
@@ -36,12 +36,18 @@
     "experiments": {
       "typedRoutes": true
     },
+    "owner": "amichan",
     "extra": {
       "router": {},
       "eas": {
-        "projectId": "834196f9-4cdf-4e27-9d04-ed57d3aeda38"
+        "projectId": "3bdfbc6f-f9e5-4cd0-8178-e7404e6ecf96"
       }
     },
-    "owner": "amichan"
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/3bdfbc6f-f9e5-4cd0-8178-e7404e6ecf96"
+    }
   }
 }
