@@ -1,3 +1,4 @@
 eas build --platform android --profile production-apk
 
-eas update --branch main --channel production-apk
+eas update --channel production-apk
+
