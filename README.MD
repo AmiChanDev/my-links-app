@@ -6,8 +6,8 @@ This App is a simple application designed to help me organize and share my favor
 
 ## Features
 
-- **Link Management**: Easily add, edit, or remove links.
-- **Customizable Interface**: Personalize the look and feel of your links page.
+- **Link Management**: Easily view and share all my links in one place.
+- **Customizable Interface**: Personalize the look and feel of my links page.
 - **Responsive Design**: Works seamlessly on desktop and mobile devices.
 - **Simple Setup**: Quick and easy to deploy for personal or professional use.
 - **Over-the-Air Updates**: Seamlessly update the app via Expo EAS
